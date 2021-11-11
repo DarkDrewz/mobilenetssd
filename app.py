@@ -151,6 +151,10 @@ def event_handle(event):
         msg = str(event["message"]["text"])
         if (msg == "สวัสดี") :
            replyObj = TextSendMessage(text="สวัสดีค่ะ")
+        elif (msg == "เหงาจัง") :
+           replyObj = TextSendMessage(text="มาอยู่กับหนูไหมคะ") 
+        elif (msg == "ร้องเพลงให้ฟังหน่อย") :
+           replyObj = TextSendMessage(text="ไม่เอาหรอก แบร่")
         else :
            replyObj = TextSendMessage(text=msg)
         line_bot_api.reply_message(rtoken, replyObj)
