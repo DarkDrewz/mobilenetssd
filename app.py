@@ -155,6 +155,18 @@ def event_handle(event):
            replyObj = TextSendMessage(text="มาอยู่กับหนูไหมคะ") 
         elif (msg == "ร้องเพลงให้ฟังหน่อย") :
            replyObj = TextSendMessage(text="ไม่เอาหรอก แบร่")
+        elif (msg == "ทำการบ้านให้หน่อย") :
+           replyObj = TextSendMessage(text="ทำเองสิคะ หนูไม่ทำให้หรอก")
+        elif (msg == "ชิโระเป็นอะไร") :
+           replyObj = TextSendMessage(text="เป็นน้องสาวค่ะ")
+        elif (msg == "เล่นเกมกันไหม") :
+           replyObj = TextSendMessage(text="เล่นค่าาาาา")
+        elif (msg == "ขอวาปหน่อย") :
+           replyObj = TextSendMessage(text="twitch.tv/darkdrewzz")
+        elif (msg == "ฝันดีนะ") :
+           replyObj = TextSendMessage(text="ฝันดีค่ะ")
+        elif (msg == "ใครเป็นผู้สร้าง") :
+           replyObj = TextSendMessage(text="รัฐภูมิ กระต่ายจันทร์ ค่าา")
         else :
            replyObj = TextSendMessage(text=msg)
         line_bot_api.reply_message(rtoken, replyObj)
