@@ -149,27 +149,36 @@ def event_handle(event):
 
     if msgType == "text":
         msg = str(event["message"]["text"])
-        if (msg == "สวัสดี") :
-           replyObj = TextSendMessage(text="สวัสดีค่ะ")
-        elif (msg == "เหงาจัง") :
-           replyObj = TextSendMessage(text="มาอยู่กับหนูไหมคะ") 
-        elif (msg == "ร้องเพลงให้ฟังหน่อย") :
-           replyObj = TextSendMessage(text="ไม่เอาหรอก แบร่")
-        elif (msg == "ทำการบ้านให้หน่อย") :
-           replyObj = TextSendMessage(text="ทำเองสิคะ หนูไม่ทำให้หรอก")
-        elif (msg == "ชิโระเป็นอะไร") :
-           replyObj = TextSendMessage(text="เป็นน้องสาวค่ะ")
-        elif (msg == "เล่นเกมกันไหม") :
-           replyObj = TextSendMessage(text="เล่นค่าาาาา")
-        elif (msg == "ขอวาปหน่อย") :
-           replyObj = TextSendMessage(text="twitch.tv/darkdrewzz")
-        elif (msg == "ฝันดีนะ") :
-           replyObj = TextSendMessage(text="ฝันดีค่ะ")
-        elif (msg == "ใครเป็นผู้สร้าง") :
-           replyObj = TextSendMessage(text="รัฐภูมิ กระต่ายจันทร์ ค่าา")
+        if msg == "สวัสดี" :
+            replyObj = TextSendMessage(text="สวัสดีค่ะ")
+            line_bot_api.reply_message(rtoken, replyObj)
+        elif msg == "เหงาจัง" :
+            replyObj = TextSendMessage(text="มาอยู่กับหนูไหมคะ") 
+            line_bot_api.reply_message(rtoken, replyObj)
+        elif msg == "ร้องเพลงให้ฟังหน่อย" :
+            replyObj = TextSendMessage(text="ไม่เอาหรอก แบร่")
+            line_bot_api.reply_message(rtoken, replyObj)
+        elif msg == "ทำการบ้านให้หน่อย" :
+            replyObj = TextSendMessage(text="ทำเองสิคะ หนูไม่ทำให้หรอก")
+            line_bot_api.reply_message(rtoken, replyObj)
+        elif msg == "ชิโระเป็นอะไร" :
+            replyObj = TextSendMessage(text="เป็นน้องสาวค่ะ")
+            line_bot_api.reply_message(rtoken, replyObj)
+        elif msg == "เล่นเกมกันไหม" :
+            replyObj = TextSendMessage(text="เล่นค่าาาาา")
+            line_bot_api.reply_message(rtoken, replyObj)
+        elif msg == "ขอวาปหน่อย" :
+            replyObj = TextSendMessage(text="twitch.tv/darkdrewzz")
+            line_bot_api.reply_message(rtoken, replyObj)
+        elif msg == "ฝันดีนะ" :
+            replyObj = TextSendMessage(text="ฝันดีค่ะ")
+            line_bot_api.reply_message(rtoken, replyObj)
+        elif msg == "ใครเป็นผู้สร้าง" :
+            replyObj = TextSendMessage(text="รัฐภูมิ กระต่ายจันทร์ ค่าา")
+            line_bot_api.reply_message(rtoken, replyObj)
         else :
            replyObj = TextSendMessage(text=msg)
-        line_bot_api.reply_message(rtoken, replyObj)
+           line_bot_api.reply_message(rtoken, replyObj)
     elif msgType == "image":
         try:
             message_content = line_bot_api.get_message_content(event['message']['id'])
