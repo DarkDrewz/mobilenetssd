@@ -8,6 +8,7 @@ import requests
 import tempfile, shutil, os
 from PIL import Image
 from io import BytesIO
+import pycurl
 
 from linebot.models import (
     TemplateSendMessage, AudioSendMessage,
