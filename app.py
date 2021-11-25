@@ -168,7 +168,7 @@ def event_handle(event):
             replyObj = TextSendMessage(text="เล่นค่าาาาา")
             line_bot_api.reply_message(rtoken,replyObj)
         elif (msg == "ขอวาปหน่อย") :
-            replyObj = TextSendMessage(text="twitch.tv/darkdrewzz")
+            replyObj = TextSendMessage(text="https://www.twitch.tv/taigaaaaaaaaax")
             line_bot_api.reply_message(rtoken,replyObj)
         elif (msg == "ฝันดีนะ") :
             replyObj = TextSendMessage(text="ฝันดีค่ะ")
