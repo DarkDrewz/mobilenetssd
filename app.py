@@ -152,31 +152,31 @@ def event_handle(event,json_line):
 
     if msgType == "text":
         msg = str(event["message"]["text"])
-        if msg == "สวัสดี" :
+        if msg == "สวัสดี":
             replyObj = TextSendMessage(text="สวัสดีค่ะ")
             line_bot_api.reply_message(rtoken,replyObj)
-        elif msg == "เหงาจัง" :
+        elif msg == "เหงาจัง":
             replyObj = TextSendMessage(text="มาอยู่กับหนูไหมคะ") 
             line_bot_api.reply_message(rtoken,replyObj)
-        elif msg == "ร้องเพลงให้ฟังหน่อย" :
+        elif msg == "ร้องเพลงให้ฟังหน่อย":
             replyObj = TextSendMessage(text="ไม่เอาหรอก แบร่")
             line_bot_api.reply_message(rtoken,replyObj)
-        elif msg == "ทำการบ้านให้หน่อย" :
+        elif msg == "ทำการบ้านให้หน่อย":
             replyObj = TextSendMessage(text="ทำเองสิคะ หนูไม่ทำให้หรอก")
             line_bot_api.reply_message(rtoken,replyObj)
-        elif msg == "ชิโระเป็นอะไร" :
+        elif msg == "ชิโระเป็นอะไร":
             replyObj = TextSendMessage(text="เป็นน้องสาวค่ะ")
             line_bot_api.reply_message(rtoken, replyObj)
-        elif msg == "เล่นเกมกันไหม" :
+        elif msg == "เล่นเกมกันไหม":
             replyObj = TextSendMessage(text="เล่นค่าาาาา")
             line_bot_api.reply_message(rtoken,replyObj)
-        elif msg == "ขอวาปหน่อย" :
+        elif msg == "ขอวาปหน่อย":
             replyObj = TextSendMessage(text="https://www.twitch.tv/taigaaaaaaaaax")
             line_bot_api.reply_message(rtoken,replyObj)
         elif msg == "ฝันดีนะ" :
             replyObj = TextSendMessage(text="ฝันดีค่ะ")
             line_bot_api.reply_message(rtoken,replyObj)
-        elif msg == "ใครเป็นผู้สร้าง" :
+        elif msg == "ใครเป็นผู้สร้าง":
             replyObj = TextSendMessage(text="รัฐภูมิ กระต่ายจันทร์ ค่าา")
             line_bot_api.reply_message(rtoken,replyObj)
         else :
@@ -184,7 +184,7 @@ def event_handle(event,json_line):
             json_headers = ({k:v for k, v in headers.items()})
             json_headers.update({'Host':'bots.dialogflow.com'})
             url = "https://dialogflow.cloud.google.com/v1/integrations/line/webhook/361addf1-0137-4ea1-afd0-2b66399ca9de"
-            requests.post(url,data=json_line, headers=json_headers)
+            requests.post(url,data=json_line,headers=json_headers)
     elif msgType == "image":
         try:
             message_content = line_bot_api.get_message_content(event['message']['id'])
