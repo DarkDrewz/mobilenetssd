@@ -8,7 +8,7 @@ import requests
 import tempfile, shutil, os
 from PIL import Image
 from io import BytesIO
-'''
+
 from linebot.models import (
     TemplateSendMessage, AudioSendMessage,
     MessageEvent, TextMessage, TextSendMessage,
@@ -19,9 +19,9 @@ from linebot.models.template import *
 from linebot import (
     LineBotApi, WebhookHandler
 )
-'''
+
 app = Flask(__name__, static_url_path="/static")
-'''
+
 UPLOAD_FOLDER ='static/uploads/'
 DOWNLOAD_FOLDER = 'static/downloads/'
 ALLOWED_EXTENSIONS = {'jpg', 'png','.jpeg'}
@@ -39,11 +39,10 @@ app.config['MAX_CONTENT_LENGTH'] = 6 * 1024 * 1024
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-'''
+
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    return ''
-'''
+
     if request.method == 'POST':
         if 'file' not in request.files:
             flash('No file attached in request')
